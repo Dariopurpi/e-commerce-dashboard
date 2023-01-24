@@ -14,7 +14,7 @@ const navBarLinks = [
   },
   {
     id: 3,
-    label: "Prodocuts",
+    label: "Products",
     route: "products",
   },
   {

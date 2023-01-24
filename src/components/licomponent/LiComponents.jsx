@@ -1,10 +1,13 @@
 import style from "./style.module.scss";
 
-const LiComponent = ({ label, icon }) => {
+const LiComponent = ({ label, icon, route, setRoute }) => {
+  const x = () => {
+    setRoute(route);
+  };
   return (
     <li className={style.main}>
       <div>{icon}</div>
-      <div>{label}</div>
+      <div onClick={x}>{label}</div>
     </li>
   );
 };
