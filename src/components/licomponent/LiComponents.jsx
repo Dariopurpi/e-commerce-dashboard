@@ -5,10 +5,12 @@ const LiComponent = ({ label, icon, route, setRoute }) => {
     setRoute(route);
   };
   return (
-    <li className={style.main}>
-      <div>{icon}</div>
-      <div onClick={x}>{label}</div>
-    </li>
+    <>
+      <li className={style.main}>{icon}</li>
+      <li className={style.main} onClick={x}>
+        {label}
+      </li>
+    </>
   );
 };
 

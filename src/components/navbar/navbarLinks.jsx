@@ -1,11 +1,8 @@
-import { FaBeer } from "react-icons/fa";
-
 const navBarLinks = [
   {
     id: 1,
     label: "Home",
     route: "home",
-    icon: <FaBeer />,
   },
   {
     id: 2,
