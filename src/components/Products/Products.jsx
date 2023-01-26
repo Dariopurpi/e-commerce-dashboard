@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { GET, POST } from "../../utils/http";
+import { GET } from "../../utils/http";
 import LiComponent from "../licomponent/LiComponents";
 import AddForm from "../addForm/AddForm";
 import Card from "../card/Card";
