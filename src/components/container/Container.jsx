@@ -6,19 +6,16 @@ import { useState } from "react";
 import Navbar from "../navbar/Navbar";
 import Products from "../Products/Products";
 
-const Container = () => {
-  const [route, setRoute] = useState("home");
-
+const Container = ({ setRoute, route }) => {
   return (
     <div>
       <div>
         <Navbar setRoute={setRoute} />
       </div>
       <div>
-        {route === "home" && <Home />}
+        {route === "home" && <Home setRoute />}
         {route === "categories" && <Categories />}
         {route === "products" && <Products />}
-
         {route === "orders" && <Order />}
         {route === "users" && <User />}
       </div>

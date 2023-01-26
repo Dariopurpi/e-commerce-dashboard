@@ -30,3 +30,13 @@ export const DELETE = (id) => {
     .then((res) => res.json())
     .then(console.log);
 };
+
+export const PATCH = (id, title) => {
+  fetch(`https://dummyjson.com/products/${id}`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      title: title,
+    }),
+  });
+};
