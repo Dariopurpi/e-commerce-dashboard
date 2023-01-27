@@ -1,23 +1,45 @@
 import Section from "../section/Section";
-
-import style from "./style.module.scss";
+import styled, { css } from "styled-components";
 
 const Home = () => {
+  const Main = styled.div`
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+
+    ${(props) =>
+      props.primary &&
+      css`
+        background: palevioletred;
+        color: white;
+        min-width: 80px;
+        border: 1px solid white;
+        padding: 25px;
+      `};
+  `;
   return (
-    <div className={style.main}>
-      <Section
+    <Main>
+      <Main
+        primary
         setRoute
         description="Clicca qui per scoprire tutti i nostri prodotti"
       >
         Products
-      </Section>
+      </Main>
 
-      <Section description="Clicca qui per scegliere una categoria di prodotti">
+      <Main
+        primary
+        description="Clicca qui per scegliere una categoria di prodotti"
+      >
         Categories
-      </Section>
-      <Section description="Entra nella tua area personale">User</Section>
-      <Section description="Controlla i tuoi ordini">Orders</Section>
-    </div>
+      </Main>
+      <Main primary description="Entra nella tua area personale">
+        User
+      </Main>
+      <Main primary description="Controlla i tuoi ordini">
+        Orders
+      </Main>
+    </Main>
   );
 };
 export default Home;
